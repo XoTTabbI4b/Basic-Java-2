@@ -1,0 +1,108 @@
+package basic.lessons;
+import java.util.Scanner;
+public class Homeworktwo {
+
+    //1.    //введите 2 слова, используйте сканер, состоящий из четного количества букв (проверьте количество букв в слове самостоятельно при вводе).
+    //Получите слово, состоящее из первой половины первого слова и второй половины второго слова.
+    //допустимо реализовать в методе main
+    //желательна реализация в отдельном методе, принимающем в качестве аргумента экземпляр класса Scanner и имеющем тип возвращаемого значения String
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите первое слово (четное количество букв): ");
+        String firstWord = scanner.next();
+        System.out.print("Введите второе слово (четное количество букв): ");
+        String secondWord = scanner.next();
+        String result = generateNewWord(firstWord, secondWord);
+        System.out.println("Новое слово: " + result);
+    }
+    public static String generateNewWord(Scanner scanner) {
+        String firstWord = scanner.next();
+        String secondWord = scanner.next();
+        return generateNewWord(firstWord, secondWord);
+    }
+    public static String generateNewWord(String firstWord, String secondWord) {
+        int halfLength = firstWord.length() / 2;
+        String firstHalf = firstWord.substring(0, halfLength);
+        String secondHalf = secondWord.substring(halfLength);
+        return firstHalf + secondHalf;
+    }
+}
+
+
+    //2.     //Реализовать программу, которая выводит на экран результаты сложения, вычитания,
+    // умножения и деления двух чисел. Каждая из арифметических операций должна быть реализована как отдельный метод.
+
+//    public static void main(String[] args) {
+//        int num1 = 10;
+//        int num2 = 5;
+//        int sum = add(num1, num2);
+//        int difference = subtract(num1, num2);
+//        int product = multiply(num1, num2);
+//        int quotient = divide(num1, num2);
+//        System.out.println("Сумма: " + sum);
+//        System.out.println("Разность: " + difference);
+//        System.out.println("Произведение: " + product);
+//        System.out.println("Частное: " + quotient);
+//    }
+//    public static int add(int num1, int num2) {
+//        int sum = num1 + num2;
+//        return sum;
+//    }
+//    public static int subtract(int num1, int num2) {
+//        int difference = num1 - num2;
+//        return difference;
+//    }
+//    public static int multiply(int num1, int num2) {
+//        int product = num1 * num2;
+//        return product;
+//    }
+//    public static int divide(int num1, int num2) {
+//        int quotient = num1 / num2;
+//        return quotient;
+//    }
+//}
+
+
+    //3.    //реализовать метод, который конвертирует указанную сумму в евро в сумму в долларах США (метод )
+    // Метод должен принимать в качестве аргумента 2 числа  - сумму в долларах и курс конвертации, возвращает сумму в евро
+
+//    public static double convertToEuro(double dollars, double exchangeRate) {
+//        double euro = dollars / exchangeRate;
+//        return euro;
+//    }
+//    public static void main(String[] args) {
+//        double dollars = 100.0;
+//        double exchangeRate = 0.85;
+//        double euro = convertToEuro(dollars, exchangeRate);
+//        System.out.printf("%.2f dollars = %.2f euro", dollars, euro);
+//    }
+//}
+
+
+    //4.     //Напишите программу, которая подсчитает, сколько дополнительных калорий будет, если вы купите пиццу
+    //диаметром 28 см вместо пиццы диаметром 24 см. Чтобы решить эту проблему, давайте предположим, что в каждом
+    //квадратном сантиметре пиццы содержится 40 калорий.
+    //(28*28*Pi/4-24*24*Pi/4)*40=6531.2 точный ответ
+
+//    public static void main(String[] args) {
+//        int diameter1 = 24;
+//        int diameter2 = 28;
+//        int caloriesPerSquareCm = 40;
+//        int area1 = calculateArea(diameter1);
+//        int area2 = calculateArea(diameter2);
+//        int caloriesDifference = calculateCalories(area2, area1, caloriesPerSquareCm);
+//        System.out.println("Разница в калориях: " + caloriesDifference + " кал.");
+//    }
+//    public static int calculateArea(int diameter) {
+//        double radius = diameter / 2.0;
+//        double area = Math.PI * radius * radius;
+//        return (int) area;
+//    }
+//    public static int calculateCalories(int area2, int area1, int caloriesPerSquareCm) {
+//        int calories2 = area2 * caloriesPerSquareCm;
+//        int calories1 = area1 * caloriesPerSquareCm;
+//        int caloriesDifference = calories2 - calories1;
+//        return caloriesDifference;
+//    }
+//}
