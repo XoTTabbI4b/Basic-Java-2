@@ -1,0 +1,214 @@
+package basic.homeworks;
+import java.util.Scanner;
+import java.util.Random;
+public class Homework3 {
+    //написать метод, который принимает строку - название фигуры "треугольник", "круг", "прямоугольник"
+    //согласно тому, какая фигура пришла, вызвать соответствующий метод дл подсчета площади фигуры.
+    //дополнительные параметры (размеры сторон) запросить непосредственно в каждом отдельном методе
+    //для подсчета площади треугольника использовать формулу Герона:
+    //S = sqrt(p * (p - a) * (p - b) * (p - c)), где sqrt - корень квадратный, p - полупериметр.
+    //для площади круга использовать статическую переменную класса Math
+    //
+    //результат вывести в консоль с округлением до 2 знаков после запятой
+    //
+    //напишите метод, который принимает строку-название фигуры, в этом методе при помощи if-else-if вызовете следующий метод, соответствующий фигуре.
+    //В каждом спец методе запросите размеры  и посчитайте площадь
+    //Pi * r
+
+//            public static void main(String[] args) {
+//            Scanner scanner = new Scanner(System.in);
+//            System.out.print("Введите название фигуры (треугольник, круг, прямоугольник): ");
+//            String figureName = scanner.nextLine().toLowerCase();
+//            checkfigure(figureName);
+//        }
+//
+//        private static void checkfigure(String figureName) {
+//            if (figureName.equals("треугольник")) {
+//                triangle();
+//            } else if (figureName.equals("круг")) {
+//                circle();
+//            } else if (figureName.equals("прямоугольник")) {
+//                rectangle();
+//            } else {
+//                System.out.println("Неизвестное название фигуры!");
+//            }
+//        }
+//
+//        private static void triangle() {
+//            Scanner scanner = new Scanner(System.in);
+//            double a = readDouble("Введите длину стороны a:  ", scanner);
+//            double b = readDouble("Введите длину стороны b:  ", scanner);
+//            double c = readDouble("Введите длину стороны c:  ", scanner);
+//            double p = (a + b + c) / 2;
+//            double area = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+//            System.out.printf(" Площадь треугольника: %.2f", area);
+//        }
+//
+//        private static void rectangle() {
+//            Scanner scanner = new Scanner(System.in);
+//            double a = readDouble("Введите длину стороны a: ", scanner);
+//            double b = readDouble("Введите длину стороны b: ", scanner);
+//            double area = a * b;
+//            System.out.printf("Площадь прямоугольника: %.2f ", area);
+//        }
+//
+//        private static void circle() {
+//            Scanner scanner = new Scanner(System.in);
+//            double r = readDouble("Введите радиус: ", scanner);
+//            double area = Math.PI * r * r;
+//            System.out.printf("Площадь круга: %.2f", area);
+//        }
+//
+//        private static double readDouble(String message, Scanner scanner) {
+//            double value;
+//            while (true) {
+//                System.out.print(message);
+//                try {
+//                    value = Double.parseDouble(scanner.nextLine());
+//                    break;
+//                } catch (NumberFormatException e) {
+//                    System.out.println("Неверный формат числа! Попробуйте еще раз.");
+//                }
+//            }
+//
+//            return value;
+//        }
+//    }
+
+
+
+//Создайте две переменные isEdekaOpen и isReweOpen, значения которых зависят от того, открыты магазины или нет.
+// Реализует логический метод canBuy,, возвращающий true ** Значение этой переменной должно быть true, если хотя
+// бы один магазин открыт, иначе false. Отобразите строку «Я могу купить еду, это ……» и значение.
+//
+//    public static void main(String[] args) {
+//        class Main {
+//            public static void main(String[] args) {
+//                class Shop {
+//                    private boolean isEdekaOpen;
+//                    private boolean isReweOpen;
+//
+//                    public Shop(boolean isEdekaOpen, boolean isReweOpen) {
+//                        this.isEdekaOpen = isEdekaOpen;
+//                        this.isReweOpen = isReweOpen;
+//                    }
+//
+//                    public boolean canBuy() {
+//                        return isEdekaOpen || isReweOpen;
+//                    }
+//                }
+//
+//                // Создаем объект класса Shop и проверяем, можно ли купить еду
+//                Shop shop = new Shop(true, false);
+//                boolean canBuy = shop.canBuy();
+//
+//                // Определяем, в каком магазине можно купить еду
+//                String shopName = "";
+//                if (shop.isEdekaOpen && !shop.isReweOpen) {
+//                    shopName = "Edeka";
+//                } else if (!shop.isEdekaOpen && shop.isReweOpen) {
+//                    shopName = "Rewe";
+//                } else if (shop.canBuy()) {
+//                    shopName = "Edeka or Rewe";
+//                }
+//
+//                // Выводим информацию о возможности покупки еды и магазине, где ее можно купить
+//                String status = canBuy ? "possible" : "impossible";
+//                System.out.println("I can buy food " + status + "in " + shopName);
+//                }
+//            }
+//        }
+//    }
+
+//Представим, что у нас есть устройство, в котором две колбы. Прибор работает корректно, если температура первой колбы выше 100 градусов,
+// а температура второй колбы меньше 100 градусов. Вы должны написать метод, который проверяет это устройство.
+// Ваша программа должна иметь переменные Temperature1 и Temperature2. В результате он выводит сообщение true или false.
+//
+//public static class main {
+//        public static void main(String[] args) {
+//            Device device = new Device(120, 80);
+//            System.out.println("Device is working: " + device.isDeviceWorking());
+//        }
+//
+//        static class Device {
+//            private int temperature1;
+//            private int temperature2;
+//
+//            public Device(int temperature1, int temperature2) {
+//                this.temperature1 = temperature1;
+//                this.temperature2 = temperature2;
+//            }
+//
+//            public boolean isDeviceWorking() {
+//                return temperature1 > 100 && temperature2 < 100;
+//            }
+//        }
+//    }
+//}
+
+
+//Есть устройство, на табло которого показывается количество секунд, оставшихся до конца рабочего дня.
+// Когда рабочий день начинается ровно в 9 часов утра — табло отображает «28800» (т.е. остаётся 8 часов),
+// когда 14:30 — на табло «9000» (т.е. остаётся два с половиной часа), а когда наступает 17 часов —
+// а табло отображается «0» (т.е. рабочий день закончился).
+//Некоторый сотрудники не умеют оценивать остаток рабочего дня в секундах.
+//Итак: требуется написать программу, которая вместо секунд будет выводить на табло понятные фразы с
+// информацией о том, сколько полных часов осталось до конца рабочего дня.
+//Например: «осталось 7 часов», «осталось 4 часа», «остался 1 час», «осталось менее часа».
+//Обьяснение: в переменную n должно записываться случайное (на время тестирования программы) целое
+// число из диапазона от 0 до 28800, далее оно должно выводиться на экран (для тех, кто понимает в секундах)
+// и на следующей строке (для тех кто не понимает) должна выводиться фраза о количестве полных часов,
+// содержащихся в n секундах.
+
+//    public static class Main {
+//        public static void main(String[] args) {
+//            Scanner scanner = new Scanner(System.in);
+//            System.out.print("Введите количество оставшихся секунд: ");
+//            int remainingSeconds = scanner.nextInt();
+//
+//            System.out.println("Осталось " + getRemainingHours(remainingSeconds));
+//        }
+//
+//        public static String getRemainingHours(int remainingSeconds) {
+//            int remainingHours = (28800 - remainingSeconds) / 3600;
+//
+//            if (remainingHours > 0) {
+//                return "осталось " + remainingHours + " час" + getHourSuffix(remainingHours);
+//            } else {
+//                return "осталось менее часа";
+//            }
+//        }
+//
+//        public static String getHourSuffix(int hours) {
+//            if (hours == 1 || hours == 21) {
+//                return "";
+//            } else if (hours < 5 || (hours > 20 && hours < 25)) {
+//                return "а";
+//            } else {
+//                return "ов";
+//            }
+//        }
+//    }
+//}
+
+    public static class Main {
+        public static void main(String[] args) {
+            // Генерируем случайное число от 0 до 28800
+            Random random = new Random();
+            int n = random.nextInt(28801);
+            System.out.println("Осталось секунд: " + n);
+
+            // Вычисляем количество полных часов
+            int hours = n / 3600;
+
+            // Выводим сообщение в зависимости от количества полных часов
+            if (hours > 1) {
+                System.out.println("Осталось " + hours + " часов");
+            } else if (hours == 1) {
+                System.out.println("Остался 1 час");
+            } else {
+                System.out.println("Осталось менее часа");
+            }
+        }
+    }
+}
