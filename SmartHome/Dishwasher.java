@@ -4,7 +4,7 @@ public class Dishwasher extends Appliance {
 
     public Dishwasher(String name) {
         super(name);
-        isCycleComplete = false;
+        isCycleComplete = true; // Изначально предполагаем, что цикл мойки завершен
     }
 
     @Override
@@ -16,4 +16,6 @@ public class Dishwasher extends Appliance {
     public boolean isCycleComplete() {
         return isCycleComplete;
     }
+
+    // Другие методы и функциональность класса Dishwasher
 }
