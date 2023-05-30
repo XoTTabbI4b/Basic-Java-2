@@ -17,5 +17,4 @@ public class Dishwasher extends Appliance {
         return isCycleComplete;
     }
 
-    // Другие методы и функциональность класса Dishwasher
-}
+ }
