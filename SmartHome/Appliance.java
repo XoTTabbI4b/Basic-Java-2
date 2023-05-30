@@ -9,16 +9,19 @@ public abstract class Appliance {
     }
 
     public void turnOn() {
-        working = true;
-        System.out.println(name + " включен");
+        if (!working) {
+            working = true;
+            System.out.println(name + " включен");
+        } else {
+            System.out.println(name + " уже включен");
+        }
     }
 
     public void turnOff() {
-        working = false;
-        System.out.println(name + " выключен");
+        if (working) {
+            working = false;
+            System.out.println(name + " выключен");
+        } else {
+            System.out.println(name + " уже выключен");
+        }
     }
-
-    public boolean isWorking() {
-        return working;
-    }
-}
